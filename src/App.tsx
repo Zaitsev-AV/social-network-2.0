@@ -1,7 +1,7 @@
-import './App.css'
+import { Layout } from '@/components/layout/layout.tsx'
 
 function App() {
-  return <div>Hello</div>
+  return <Layout />
 }
 
 export default App
