@@ -1,0 +1,5 @@
+export { default as HomeIcon } from './home.tsx'
+export { default as BurgerIcon } from './burger.tsx'
+export { default as CloseIcon } from './close.tsx'
+export { default as NewsIcon } from './news.tsx'
+export { default as SettingsIcon } from './settings.tsx'
