@@ -4,13 +4,14 @@ import { clsx } from 'clsx'
 
 import s from './sidebar.module.scss'
 
-import { BurgerIcon, CloseIcon, HomeIcon, NewsIcon, SettingsIcon } from '@/assets/icons'
+import { BurgerIcon, CloseIcon, HomeIcon, LogoutIcon, NewsIcon, SettingsIcon } from '@/assets/icons'
 
 const navItems = [
   { title: 'home', icon: <HomeIcon /> },
   { title: 'news', icon: <NewsIcon /> },
   { title: 'settings', icon: <SettingsIcon /> },
   { title: 'audio', icon: <HomeIcon /> },
+  { title: 'logout', icon: <LogoutIcon /> },
 ]
 
 export const Sidebar: FC = () => {
@@ -33,6 +34,7 @@ export const Sidebar: FC = () => {
           <button type="button" className={cn.burger} onClick={() => setIsOpen(!isOpen)}>
             <span>{isOpen ? <CloseIcon /> : <BurgerIcon />}</span>
           </button>
+          <span className={cn.logo}>Social Network</span>
           {/*<img src="'''" alt="'''" className={cn.logo} />*/}
         </header>
         <nav className={cn.menu}>
