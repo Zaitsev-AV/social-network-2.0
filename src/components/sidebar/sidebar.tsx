@@ -2,9 +2,16 @@ import { FC, useState } from 'react'
 
 import { clsx } from 'clsx'
 
-import s from './sidebar.module.scss'
+import {
+  BurgerIcon,
+  CloseIcon,
+  HomeIcon,
+  LogoutIcon,
+  NewsIcon,
+  SettingsIcon,
+} from '../../app/assets/icons'
 
-import { BurgerIcon, CloseIcon, HomeIcon, LogoutIcon, NewsIcon, SettingsIcon } from '@/assets/icons'
+import s from './sidebar.module.scss'
 
 const navItems = [
   { title: 'home', icon: <HomeIcon /> },
