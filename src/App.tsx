@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { Layout } from '@/components/layout/layout.tsx'
+import { NewsPage } from '@/pages/news-page.tsx'
 
 const routes = createBrowserRouter([
   {
@@ -16,11 +17,7 @@ const routes = createBrowserRouter([
       // },
       {
         path: '/news',
-        element: (
-          <div style={{ position: 'absolute', left: '40%', top: '40%', fontSize: '100px' }}>
-            News Page
-          </div>
-        ),
+        element: <NewsPage />,
       },
     ],
   },
