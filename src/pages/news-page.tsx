@@ -1,15 +1,15 @@
 import { FC, useEffect } from 'react'
 
-import { useAppDispatch } from '@/app/hooks'
+import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { getNews } from '@/services/news/news-slice.ts'
 
 export const NewsPage: FC = () => {
   const dispatch = useAppDispatch()
+  const data = useAppSelector(state => state.news)
 
+  console.log(data)
   useEffect(() => {
-    const res = dispatch(getNews())
-
-    console.log(res)
+    dispatch(getNews())
   }, [])
 
   return (
