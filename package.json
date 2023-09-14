@@ -11,6 +11,7 @@
     "lint": "eslint --fix src/**/*.{tsx,ts,jsx,js} --no-error-on-unmatched-pattern && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^1.2.2",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.5.0",
     "clsx": "^2.0.0",
