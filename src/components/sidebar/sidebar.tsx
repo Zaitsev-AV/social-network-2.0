@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 
 import { clsx } from 'clsx'
+import { useNavigate } from 'react-router-dom'
 
 import {
   BurgerIcon,
@@ -33,6 +34,7 @@ export const Sidebar: FC = () => {
     menu: clsx(s.menu),
     sb_button: clsx(s.button),
   }
+  const navigate = useNavigate()
 
   return (
     <aside className={cn.sidebar}>
@@ -46,8 +48,12 @@ export const Sidebar: FC = () => {
         </header>
         <nav className={cn.menu}>
           {navItems.map((item, index) => {
+            const navigateTo = () => {
+              navigate(`/${item.title}`)
+            }
+
             return (
-              <button key={index} className={cn.sb_button}>
+              <button key={index} onClick={navigateTo} className={cn.sb_button}>
                 <span>{item.icon}</span>
                 <p>{item.title}</p>
               </button>
