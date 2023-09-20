@@ -10,7 +10,9 @@ export const Layout: FC = () => {
     <>
       <Header />
       <Sidebar />
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
     </>
   )
 }

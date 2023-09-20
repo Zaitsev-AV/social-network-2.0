@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
+import { NewsItem } from '@/components/news/news.tsx'
 import { getNews } from '@/services/news/news-slice.ts'
 
 export const NewsPage: FC = () => {
@@ -13,8 +14,10 @@ export const NewsPage: FC = () => {
   }, [])
 
   return (
-    <div style={{ position: 'absolute', left: '40%', top: '40%', fontSize: '100px' }}>
-      News Page
+    <div>
+      {data.articles.map(item => {
+        return <NewsItem key={item.url} item={item} />
+      })}
     </div>
   )
 }

@@ -12,7 +12,7 @@ export type Source = {
   name: string
 }
 
-export type Articles = {
+export type NewsArticles = {
   source: Source
   author: string
   title: string
@@ -26,5 +26,5 @@ export type Articles = {
 export type NewsData = {
   status: string
   totalResults: number
-  articles: Articles[]
+  articles: NewsArticles[]
 }
